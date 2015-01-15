@@ -39,9 +39,9 @@ router.route('/donate')
 //doing a post method
 
 .post(function(request, response) {
-  if (!request.body.lastname  || !request.body.firstname  || !request.body.email  || !request.body.location  || !request.body.Amount_to_donate_monthly || !request.body.card_number) {
-    sendResponse(response, 400, "All fields must be filled")
-  }
+  // if (!request.body.lastname  || !request.body.firstname  || !request.body.email  || !request.body.location  || !request.body.Amount_to_donate_monthly || !request.body.card_number) {
+  //   sendResponse(response, 400, "All fields must be filled")
+  // }
 
   var newDonator = {
     firstname: request.body.firstname,
