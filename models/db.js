@@ -28,3 +28,5 @@ var donatorSchema =mongoose.Schema({
 
 //register schemaas a model
 mongoose.model('Donate', donatorSchema);
+
+// mongodb://donate:donate@ds039960.mongolab.com:39960/donatevv
