@@ -53,7 +53,8 @@ router.route('/donate')
     date_started: request.body.date_started    
   }
 
-  Donate.create(newDonator,function(err, newDonator) {
+  Donate
+    .create(newDonator, function(err, newDonator) {
     if (err) {
       sendResponse(response, 404, err);
     }
@@ -77,10 +78,10 @@ router.route('/donate/:firstname/edit')
 });
 
 //using delete method
-router.route('/donate/:name/delete')
+router.route('/donate/:id/delete')
   .delete(function(request,response) {
     Donate
-      .findOneAndRemove({'name': request.params.name}, function(err) {
+      .findOneAndRemove({'_id': request.params.id}, function(err) {
         if(err) {
           sendResponse(response, 404, err);
         }
